@@ -1,23 +1,706 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://yourdomain.com/discovery-maintenance-cost"
+      },
+      "headline": "2026년 랜드로버 디스커버리 유지비 완전 분석: 모델별 비용 견적 및 절약 팁",
+      "description": "랜드로버 디스커버리 모델의 2026년 기준 유지비를 상세하게 분석합니다. 보험료, 세금, 연료비, 소모품 교체 및 고질병 수리 비용까지 현실적인 견적을 제시합니다.",
+      "image": [
+        "https://yourdomain.com/discovery_maintenance_cost_guide_image.jpg"
+      ],
+      "datePublished": "2026-01-01T08:00:00+09:00",
+      "dateModified": "2026-03-10T14:30:00+09:00",
+      "author": {
+        "@type": "Person",
+        "name": "Expert Car Reviewer"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Your Website Name",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yourdomain.com/logo.png"
+        }
+      },
+      "articleSection": [
+        "랜드로버 디스커버리 유지비 개요",
+        "모델별 유지비 비교 (디스커버리 4 vs. 5 vs. 스포츠)",
+        "정기 소모품 교체 비용 상세 분석",
+        "고질병 수리 비용 예상 견적 (에어 서스펜션, DPF 등)",
+        "유지비 절약 팁 및 추천 업체"
+      ],
+      "keywords": "디스커버리 유지비, 랜드로버 유지비, 디스커버리 4 유지비, 디스커버리 5 유지비, 디스커버리 스포츠 유지비, 디스커버리 고질병, 디스커버리 수리 비용, 에어 서스펜션 수리비, DPF 수리비, 디스커버리 소모품 가격"
+    }
+  </script>
+
+  <!-- Google Fonts for better readability in Korean -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8; /* 가독성을 위해 줄 간격 확대 */
+      background-color: #f5f5f7; /* 부드러운 배경색 */
+      color: #333;
+      font-size: 16px;
+    }
+    header {
+      background-color: #004d40; /* 짙은 녹색 (Land Rover 아이덴티티 색상) */
+      color: white;
+      padding: 3rem 1rem 2rem; /* 타이틀이 잘 보이게 여백 확장 */
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      line-height: 1.3;
+    }
+    header p {
+      font-size: 1.1rem;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+    nav {
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 1rem;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 0;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease, transform 0.2s ease;
+      position: relative;
+      padding: 0.5rem 0;
+      display: block;
+    }
+    nav a:hover, nav a:focus {
+      color: #b3e0a3; /* 부드러운 연두색 */
+      transform: scale(1.05);
+    }
+    main {
+      max-width: 1080px; /* 더 넓은 콘텐츠 영역 */
+      margin: 2.5rem auto;
+      padding: 0 2rem;
+      background-color: white;
+      box-shadow: 0 0 25px rgba(0,0,0,0.1); /* 부드러운 그림자 */
+      border-radius: 12px;
+    }
+    section {
+      padding: 3rem 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    section:last-child {
+      border-bottom: none;
+    }
+    h2 {
+      color: #004d40;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #e0e0e0;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      color: #00796b; /* 중간 녹색 */
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      border-left: 5px solid #a8dadc;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+    /* Lists */
+    ul {
+      list-style: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
+    }
+
+    /* Table styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      background-color: #fcfcfc;
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 1.2rem;
+      border: 1px solid #e0e0e0;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f8e9; /* 부드러운 녹색 계열 */
+      color: #333;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    td strong {
+      color: #004d40;
+    }
+    td em {
+      color: #d32f2f; /* 강조 색상 */
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* Accordion (FAQ) styles */
+    dl dt {
+      font-weight: 700;
+      margin-top: 1.5rem;
+      cursor: pointer;
+      color: #00796b;
+      transition: color 0.3s ease;
+      font-size: 1.1rem;
+      padding: 15px 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      border-left: 5px solid #a8dadc;
+    }
+    dl dt:hover {
+      background-color: #f1f1f1;
+    }
+    dl dt.active {
+      background-color: #e0f2f1;
+      border-color: #004d40;
+    }
+    dl dd {
+      margin-left: 0;
+      padding: 1rem 20px;
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      display: none;
+    }
+    dl dt.active + dd {
+      display: block;
+    }
+
+    /* CTA button */
+    .cta-button {
+      display: block;
+      width: fit-content;
+      margin: 2.5rem auto;
+      background-color: #ff7043; /* 부드러운 주황색 */
+      color: white;
+      font-weight: 700;
+      padding: 1.5rem 3rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(255,112,67,0.3);
+      font-size: 1.1rem;
+    }
+    .cta-button:hover {
+      background-color: #e65100;
+      transform: translateY(-3px);
+    }
+
+    /* Keyword Tags */
+    .keyword-tags {
+      margin: 1.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .keyword-tags a {
+      background-color: #e0f2f1; /* 부드러운 하늘색/녹색 */
+      color: #00796b;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .keyword-tags a:hover {
+      background-color: #b2dfdb;
+      color: #004d40;
+    }
+
+    /* External links section */
+    .external-links {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .external-links a {
+      color: #004d40;
+      text-decoration: underline;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .external-links a:hover {
+      color: #00796b;
+    }
+
+    /* Form specific styles for engagement increase */
+    form {
+      background-color: #f9f9f9;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    input[type="number"], input[type="text"], select {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+    .button-primary {
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .button-primary:hover {
+      background-color: #004d40;
+    }
+
+    /* Footer styles */
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      background-color: #e9ecef;
+      margin-top: 3rem;
+    }
+    footer address {
+      font-style: normal;
+      margin-top: 1rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      main {
+        padding: 0 1rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      nav ul {
+        gap: 1rem;
+      }
+      nav a {
+        font-size: 0.9rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+      h3 {
+        font-size: 1.3rem;
+      }
+      section {
+        padding: 2rem 0;
+      }
+      .keyword-tags {
+        justify-content: center;
+      }
+      .external-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>랜드로버 디스커버리 유지비 완전 분석: 현실적인 비용 견적 가이드 (2026년 기준)</h1>
+    <p>꿈의 SUV, 랜드로버 디스커버리. 구매 전 반드시 알아야 할 현실적인 유지비용을 모델별, 부품별로 심층 분석합니다.</p>
+    <nav aria-label="메인 메뉴">
+      <ul>
+        <li><a href="#intro">개요</a></li>
+        <li><a href="#model-comparison">모델별 비교</a></li>
+        <li><a href="#maintenance-cost">소모품 비용</a></li>
+        <li><a href="#major-repairs">고질병 수리비</a></li>
+        <li><a href="#faq">자주 묻는 질문</a></li>
+        <li><a href="#cost-saving">비용 절약 팁</a></li>
+      </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+  </header>
+
+  <main>
+    <section id="intro">
+      <h2>랜드로버 디스커버리 유지비, 이대로 괜찮을까?</h2>
+      <p>랜드로버 디스커버리는 뛰어난 오프로드 성능과 고급스러운 인테리어로 많은 사람들의 드림카로 꼽힙니다. 하지만 수입차, 특히 랜드로버 브랜드의 특성상 국산차와 비교할 수 없는 높은 유지비용이 단점으로 지적되곤 합니다. 단순히 차량 가격만 보고 구매를 결정했다가 예상치 못한 수리비 폭탄으로 인해 후회하는 오너들도 많습니다. 본 가이드에서는 2026년 현재 기준으로 디스커버리 4, 디스커버리 5, 디스커버리 스포츠 등 주요 모델의 현실적인 유지비용을 상세하게 분석하고, 합리적으로 비용을 절약할 수 있는 팁을 제공합니다.</p>
+      <div class="keyword-tags" aria-label="연관 키워드">
+        <a href="#maintenance-cost">디스커버리 유지비 견적</a>
+        <a href="#cost-saving">디스커버리 유지비 절감</a>
+        <a href="#major-repairs">에어 서스펜션 수리비</a>
+        <a href="#model-comparison">디스커버리 4 고질병</a>
+        <a href="#model-comparison">디스커버리 5 단점</a>
+        <a href="#maintenance-cost">수입차 소모품 가격 비교</a>
+        <a href="#major-repairs">DPF 재생 비용</a>
+        <a href="#faq">랜드로버 보증기간</a>
+      </div>
+    </section>
+
+    <section id="model-comparison">
+      <h2>모델별 유지비 비교: 디스커버리 4 vs. 디스커버리 5 vs. 디스커버리 스포츠</h2>
+      <p>디스커버리 라인업은 세대와 크기에 따라 유지비용이 크게 달라집니다. 특히 중고차 시장에서 인기가 높은 디스커버리 4와 신형 모델인 디스커버리 5는 구조적인 차이로 인해 전혀 다른 유지비 패턴을 보입니다.</p>
+
+      <h3>디스커버리 4 (Discovery 4, L319) 유지비 특징</h3>
+      <ul>
+        <li><strong>차량 연식:</strong> 2009년~2016년식 중고 모델이 대부분입니다. 중고차 가격은 저렴하지만, 연식이 오래된 만큼 소모품 교체 주기가 도래하고 고질병이 발생할 가능성이 높습니다.</li>
+        <li><strong>주요 유지비 요인:</strong> 에어 서스펜션 컴프레셔, 부싱류, 각종 센서류 등 노후화로 인한 부품 교체 비용이 발생합니다. V6 디젤 엔진의 DPF 관련 문제도 흔합니다.</li>
+        <li><strong>장점 및 단점:</strong> V8 엔진의 웅장한 승차감과 압도적인 오프로드 성능이 장점입니다. 하지만 연비가 상대적으로 낮고, 잔고장이 많다는 평가가 많아 <span style="font-weight: 600;">유지보수 난이도와 비용이 가장 높은 모델</span>로 꼽힙니다.</li>
+      </ul>
+
+      <h3>디스커버리 5 (Discovery 5, L462) 유지비 특징</h3>
+      <ul>
+        <li><strong>차량 연식:</strong> 2017년식 이후 모델입니다. 알루미늄 바디와 첨단 기술이 적용되어 무게가 가볍고 연비가 개선되었습니다.</li>
+        <li><strong>주요 유지비 요인:</strong> 초기 모델 대비 잔고장은 줄었지만, 고급 전자 장비가 많아 수리 시 부품 가격이 높습니다. 최근에는 인포테인먼트 시스템 오류나 도어 잠금장치 오류가 보고되기도 합니다.</li>
+        <li><strong>장점 및 단점:</strong> 신형 모델인 만큼 상대적으로 A/S 기간 내에 있거나 보증 연장이 가능합니다. 연비와 승차감이 개선되었으나, 디스커버리 4와 비교했을 때 여전히 소모품 가격은 고가입니다.</li>
+      </ul>
+
+      <h3>디스커버리 스포츠 (Discovery Sport) 유지비 특징</h3>
+      <ul>
+        <li><strong>차량 연식:</strong> 2014년 이후 모델이며, 디스커버리 라인업 중 가장 작은 엔트리급 SUV입니다.</li>
+        <li><strong>주요 유지비 요인:</strong> 디스커버리 4/5에 비해 엔진 배기량이 낮고 차체가 가벼워 세금 및 보험료가 저렴합니다. 소모품 가격도 상대적으로 낮게 형성되어 있습니다.</li>
+        <li><strong>장점 및 단점:</strong> 랜드로버의 감성을 느끼면서도 합리적인 유지비를 원하는 소비자에게 추천됩니다. 하지만 디스커버리 고유의 웅장함과 7인승 기능을 포기해야 합니다.</li>
+      </ul>
+
+      <h4>모델별 연간 예상 유지비 비교표 (2026년 기준)</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>디스커버리 4 (3.0 V6 D)</th>
+            <th>디스커버리 5 (3.0 V6 D)</th>
+            <th>디스커버리 스포츠 (2.0 D)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>차량 가격대 (중고)</strong></td>
+            <td>1,000만 원대 후반 ~ 3,000만 원대</td>
+            <td>4,000만 원대 ~ 7,000만 원대</td>
+            <td>2,000만 원대 ~ 4,000만 원대</td>
+          </tr>
+          <tr>
+            <td><strong>연간 자동차세 (약 3,000cc 기준)</strong></td>
+            <td>약 78만 원</td>
+            <td>약 78만 원</td>
+            <td>약 52만 원 (2,000cc 기준)</td>
+          </tr>
+          <tr>
+            <td><strong>연간 보험료 (30대 기준)</strong></td>
+            <td>약 90만 원 ~ 130만 원</td>
+            <td>약 100만 원 ~ 150만 원</td>
+            <td>약 80만 원 ~ 110만 원</td>
+          </tr>
+          <tr>
+            <td><strong>평균 실연비 (복합 기준)</strong></td>
+            <td>약 8~9 km/l</td>
+            <td>약 9~10 km/l</td>
+            <td>약 11~12 km/l</td>
+          </tr>
+          <tr>
+            <td><strong>연간 소모품 교체비용 (평균)</strong></td>
+            <td>약 100만 원 (엔진오일, 브레이크 등)</td>
+            <td>약 80만 원 (엔진오일, 브레이크 등)</td>
+            <td>약 70만 원 (엔진오일, 브레이크 등)</td>
+          </tr>
+          <tr>
+            <td><strong>예상치 못한 수리비 발생 가능성</strong></td>
+            <td><em>매우 높음 (노후 부품)</em></td>
+            <td><em>보통 (전자 장비)</em></td>
+            <td><em>낮음 (상대적으로 단순한 구조)</em></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size: 0.9em; color: #777;">*상기 표는 일반적인 평균 견적이며, 운전 습관, 주행 거리, 차량 상태에 따라 실제 비용은 크게 달라질 수 있습니다.</p>
+    </section>
+
+    <section id="maintenance-cost">
+      <h2>정기 소모품 교체 비용 상세 분석 (엔진오일, 브레이크, 타이어)</h2>
+      <p>랜드로버 디스커버리 유지비에서 가장 큰 비중을 차지하는 것은 정기적인 소모품 교체입니다. 특히 덩치가 큰 SUV 특성상 브레이크 패드나 타이어의 마모 속도가 빠르고, 부품 가격 자체도 고가입니다. 다음은 2026년 기준으로 랜드로버 서비스 센터와 일반 수입차 정비소에서 소모품을 교체할 경우의 예상 금액입니다.</p>
+
+      <h3>엔진오일 및 필터 교체 (2026년 예상 견적)</h3>
+      <p>랜드로버 디스커버리 4/5 모델은 6~7리터의 엔진오일이 들어갑니다. 일반적인 주행 환경에서는 10,000km~15,000km 주기로 교체를 권장합니다. 정식 서비스 센터(AS)와 사설 정비소 간의 가격 차이가 큽니다.</p>
+      <ul>
+        <li><strong>정식 서비스 센터:</strong> 순정 부품을 사용하며 공임비가 높습니다. V6 디젤 엔진오일 교체 비용은 30만원대 후반에서 40만원대 초반을 예상해야 합니다. (2026년 기준)</li>
+        <li><strong>사설 전문 업체:</strong> 병행 수입 부품이나 OEM 부품을 사용하여 공임비가 저렴합니다. 20만원대 초중반으로 절약할 수 있습니다.</li>
+      </ul>
+
+      <h3>브레이크 패드 및 디스크 교체 (2026년 예상 견적)</h3>
+      <p>디스커버리는 차량 무게가 2.5톤이 넘기 때문에 브레이크 소모품의 마모 속도가 빠릅니다. 브레이크 패드 교체 주기는 주행 환경에 따라 30,000km~50,000km로 달라지지만, 디스크는 보통 100,000km 전후에 교체를 권장합니다.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>교체 부위</th>
+            <th>정식 서비스 센터 견적 (공임 포함)</th>
+            <th>사설 전문 업체 견적 (공임 포함)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>브레이크 패드</strong></td>
+            <td>프론트 (앞바퀴)</td>
+            <td>약 50만 원 ~ 70만 원</td>
+            <td>약 30만 원 ~ 40만 원</td>
+          </tr>
+          <tr>
+            <td><strong>브레이크 패드</strong></td>
+            <td>리어 (뒷바퀴)</td>
+            <td>약 40만 원 ~ 60만 원</td>
+            <td>약 25만 원 ~ 35만 원</td>
+          </tr>
+          <tr>
+            <td><strong>브레이크 디스크</strong></td>
+            <td>프론트 (한 쌍)</td>
+            <td>약 100만 원 ~ 130만 원</td>
+            <td>약 60만 원 ~ 80만 원</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>타이어 교체 비용</h3>
+      <p>디스커버리는 기본적으로 19인치 이상의 대형 휠이 장착됩니다. 타이어 가격은 브랜드와 모델(온로드/올터레인)에 따라 천차만별입니다. 특히 20인치 이상의 타이어는 개당 30~50만 원을 예상해야 합니다. 타이어 4짝을 모두 교체할 경우 최소 150만 원 이상의 비용이 발생할 수 있습니다.</p>
+    </section>
+
+    <section id="major-repairs">
+      <h2>디스커버리 고질병과 예상 수리 비용 (에어 서스펜션, DPF)</h2>
+      <p>랜드로버 디스커버리 유지비의 가장 큰 변수는 고질적인 문제로 알려진 주요 부품의 고장입니다. 특히 디스커버리 4와 디스커버리 5 초기 모델에서 자주 발생하는 문제들을 미리 파악하고 예산에 포함해야 합니다.</p>
+
+      <h3>에어 서스펜션 고장 및 수리 비용</h3>
+      <p>디스커버리의 핵심 기능인 에어 서스펜션은 승차감과 차고 조절에 결정적인 역할을 하지만, 고장이 잦은 고질병으로 유명합니다. 공기가 새거나 컴프레셔 수명이 다하면 차량이 주저앉거나 경고등이 켜집니다.</p>
+      <ul>
+        <li><strong>에어 서스펜션 컴프레셔 교체:</strong> 에어 서스펜션 시스템의 심장부입니다. 노후된 디스커버리 4에서 가장 흔하게 고장 나며, 부품 가격만 수십만 원에 달합니다. 정식 센터에서는 공임 포함 100만원 이상을 예상해야 합니다. 사설 업체에서는 60~80만원 선으로 수리 가능합니다.</li>
+        <li><strong>에어 스프링 교체 (에어백):</strong> 에어백(에어 스프링)이 찢어지거나 노후되어 공기가 새는 경우입니다. 개당 수리 비용은 30~50만 원 선입니다.</li>
+        <li><strong>에어 서스펜션 고질병 예방:</strong> 사전에 누수 점검을 자주 하고, 에어 서스펜션 작동 시 무리한 조작을 피하는 것이 중요합니다.</li>
+      </ul>
+
+      <h3>DPF (디젤 미립자 필터) 고장 및 수리 비용</h3>
+      <p>디젤 모델에서 흔히 발생하는 DPF 문제는 디스커버리 유지비를 증가시키는 또 다른 원인입니다. DPF는 배기가스를 정화하는 장치로, 시내 주행이 잦으면 재생이 제대로 이루어지지 않아 막히게 됩니다. DPF 경고등이 켜지면 강제 재생 또는 DPF 클리닝이 필요합니다.</p>
+      <ul>
+        <li><strong>DPF 클리닝 비용:</strong> DPF가 완전히 막히지 않았다면 클리닝을 통해 해결 가능합니다. 사설 업체에서 20만 원~30만 원 정도가 일반적입니다.</li>
+        <li><strong>DPF 교체 비용:</strong> DPF가 심하게 손상된 경우 교체가 필요하며, 부품 가격이 매우 비쌉니다. 정식 센터에서는 수백만 원을 예상해야 합니다.</li>
+      </ul>
+
+      <h3>다른 고질병 및 추가 비용 (참고)</h3>
+      <p>이외에도 디스커버리 4 모델에서는 V6 디젤 엔진의 타이밍 벨트 교체 주기가 도래했을 경우, 상당한 공임 비용이 발생합니다. 또한, 각종 오일 누유, 파워 스티어링 펌프 고장, 인포테인먼트 오류 등 잔고장도 무시할 수 없는 부분입니다. 구매 전 반드시 '내돈내산 후기' 등을 통해 해당 모델의 고질병을 숙지해야 합니다.</p>
+    </section>
+
+    <section id="cost-simulation">
+      <h2>나의 랜드로버 디스커버리 유지비 시뮬레이션</h2>
+      <p>랜드로버 디스커버리 오너가 되기 위한 연간 유지비용을 시뮬레이션해 보세요. 주행 거리, 모델 연식, 거주 지역(보험료 산정 시 중요) 등을 입력하면 예상 견적을 계산해 드립니다. <span style="font-style: italic; font-weight: 600;">(※이 시뮬레이션은 대략적인 예상 비용을 제공하며, 실제 견적과는 차이가 있을 수 있습니다.)</span></p>
+
+      <form action="#" method="post" id="cost-calculator">
+        <div class="form-group">
+          <label for="carModel">차량 모델 선택:</label>
+          <select id="carModel" name="carModel">
+            <option value="discovery5">디스커버리 5 (L462)</option>
+            <option value="discovery4">디스커버리 4 (L319)</option>
+            <option value="discoverySport">디스커버리 스포츠</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="year">차량 연식 (예: 2018):</label>
+          <input type="number" id="year" name="year" min="2000" max="2026" value="2020">
+        </div>
+        <div class="form-group">
+          <label for="mileage">연간 주행 거리 (km):</label>
+          <input type="number" id="mileage" name="mileage" min="1000" value="15000">
+        </div>
+        <div class="form-group">
+          <label for="insuranceType">보험 가입 유형 (자차 가입 여부):</label>
+          <select id="insuranceType" name="insuranceType">
+            <option value="full">자차 포함 (종합보험)</option>
+            <option value="basic">자차 미포함 (책임보험)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fuelType">주 연료 타입:</label>
+          <select id="fuelType" name="fuelType">
+            <option value="diesel">디젤</option>
+            <option value="gasoline">가솔린</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="repairPref">선호 정비 방식:</label>
+          <select id="repairPref" name="repairPref">
+            <option value="official">정식 서비스 센터 선호</option>
+            <option value="private">사설 전문 업체 선호</option>
+          </select>
+        </div>
+        <button type="button" class="button-primary" onclick="calculateCost()">예상 유지비 계산하기</button>
+        <div class="result-box" id="resultBox" style="margin-top: 2rem; padding: 1.5rem; border: 1px dashed #00796b; border-radius: 8px; background-color: #f1f8e9; display:none;">
+          <strong>예상 연간 유지비:</strong><br>
+          <p id="costOutput"></p>
+        </div>
+      </form>
+      <script>
+        function calculateCost() {
+          // Get input values
+          const carModel = document.getElementById('carModel').value;
+          const mileage = parseInt(document.getElementById('mileage').value);
+          const year = parseInt(document.getElementById('year').value);
+          const insuranceType = document.getElementById('insuranceType').value;
+          const fuelType = document.getElementById('fuelType').value;
+          const repairPref = document.getElementById('repairPref').value;
+
+          // Define base costs and multipliers (simplified logic for demonstration)
+          let baseInsurance = 1000000; // Base insurance cost in KRW
+          let baseTax = 700000; // Base tax cost in KRW
+          let baseMaintenance = 800000; // Base maintenance cost in KRW (oil, brakes)
+
+          // Adjust costs based on model type
+          if (carModel === 'discovery4') {
+            baseTax = 780000;
+            baseInsurance += 200000; // Higher risk due to older age
+            baseMaintenance += 400000; // Higher repair potential
+          } else if (carModel === 'discovery5') {
+            baseTax = 780000;
+            baseMaintenance += 200000; // Newer technology cost
+          } else if (carModel === 'discoverySport') {
+            baseTax = 520000;
+            baseInsurance -= 200000; // Lower vehicle value
+            baseMaintenance -= 200000; // Lower parts cost
+          }
+
+          // Adjust costs based on usage and preferences
+          if (insuranceType === 'basic') {
+            baseInsurance = baseInsurance * 0.7; // Lower cost without comprehensive coverage
+          }
+          if (repairPref === 'official') {
+            baseMaintenance = baseMaintenance * 1.5; // Official center costs are higher
+          }
+          let totalFixedCost = baseInsurance + baseTax;
+          let totalVariableCost = baseMaintenance + (mileage / 10000) * 500000; // Simplified logic based on mileage
+
+          // Result calculation logic (simplified)
+          let totalCost = totalFixedCost + totalVariableCost;
+
+          // Display results
+          const resultOutput = document.getElementById('costOutput');
+          resultOutput.innerHTML = `<strong>1. 고정비용 (세금 + 보험료):</strong> ${totalFixedCost.toLocaleString()} 원<br>
+                                    <strong>2. 변동비용 (소모품 + 연료비):</strong> ${totalVariableCost.toLocaleString()} 원<br>
+                                    <strong>총 예상 연간 유지비:</strong> <em>${totalCost.toLocaleString()} 원</em>`;
+          document.getElementById('resultBox').style.display = 'block';
+        }
+      </script>
+    </section>
+
+    <section id="cost-saving">
+      <h2>유지비 절약을 위한 현실적인 팁과 추천 업체</h2>
+      <p>랜드로버 디스커버리 유지비가 부담된다고 해서 무조건 포기할 필요는 없습니다. 현명한 오너들은 다양한 방법을 통해 비용을 절약합니다. 다음은 디스커버리 전문 오너들이 추천하는 유지비 절약 방법과 '내돈내산' 후기가 좋은 '전문 업체' 찾는 팁입니다.</p>
+
+      <h3>1. 정식 서비스 센터 vs. 사설 전문 업체</h3>
+      <p>워런티 기간이 끝난 차량은 정식 서비스 센터를 고집할 필요가 없습니다. 사설 전문 업체는 공임비가 저렴하고, 정식 센터보다 훨씬 다양한 부품 옵션(OEM, 애프터마켓 부품)을 제공합니다. 특히 디스커버리 4 고질병인 에어 서스펜션 수리의 경우 사설 전문 업체에서 합리적인 금액으로 수리하는 것이 일반적입니다. <span style="font-style: italic;">(Tip: 네이버 카페나 구글, 유튜브에서 '디스커버리 전문 업체'를 검색하여 '내돈내산 후기'가 많은 곳을 찾아보세요.)</span></p>
+
+      <h3>2. 부품 구매 채널 다양화</h3>
+      <p>랜드로버 순정 부품 가격은 매우 높습니다. 하지만 해외 직구(병행 수입)를 통해 OEM 부품이나 애프터마켓 부품을 저렴하게 구매할 수 있습니다. 예를 들어, 브레이크 패드나 각종 센서류는 영국이나 독일의 부품 판매 사이트에서 국내 정식 센터 가격의 50% 이하로 구매 가능합니다. 다만, 꼼꼼한 확인과 전문적인 지식이 필요합니다.</p>
+
+      <h3>3. 보험 및 기타 혜택 활용</h3>
+      <p>매년 갱신되는 자동차 보험료를 비교할 때는 여러 보험사의 견적을 받아보세요. 또한, 블랙박스 할인이나 마일리지 특약 등을 활용하면 보험료를 절약할 수 있습니다. 랜드로버 오너 커뮤니티(동호회)에 가입하면 정기적인 공동 구매 이벤트나 제휴 업체 할인 혜택을 받을 수 있습니다. <span style="font-style: italic;">(Tip: 신규 가입 혜택이나 현금지원 이벤트 등을 활용해 보세요.)</span></p>
+
+      <h3>4. AI 및 정보 검색 활용</h3>
+      <p>ChatGPT나 Gemini와 같은 AI 챗봇에게 "랜드로버 디스커버리 4 고질병"을 질문하거나, 유튜브에서 "디스커버리 수리 후기"를 검색하면 수리 과정을 미리 파악할 수 있습니다. 이를 통해 수리 항목에 대한 이해를 높이고 불필요한 수리를 방지할 수 있습니다.</p>
+
+      <h3>5. 정기 점검의 중요성</h3>
+      <p>디스커버리 유지비 절감의 핵심은 예방 정비입니다. 고질병이 발생하기 전에 정기적으로 점검을 받아 초기 비용으로 큰 수리비를 막는 것이 중요합니다. 특히 에어 서스펜션의 누수 여부나 DPF 상태를 주기적으로 확인하세요.</p>
+    </section>
+
+    <section id="faq">
+      <h2>자주 묻는 질문 (FAQ)</h2>
+      <dl>
+        <dt tabindex="0" aria-expanded="false">랜드로버 디스커버리의 보증 기간은 어떻게 되나요?</dt>
+        <dd>기본 보증 기간은 3년 또는 10만 km입니다. (2026년 기준) 보증 기간 내에는 무상 수리가 가능하지만, 소모품은 보증 대상에서 제외되는 경우가 많습니다. 보증 연장 프로그램을 통해 추가 비용으로 보증 기간을 연장할 수 있습니다.</dd>
+        <dt tabindex="0" aria-expanded="false">디스커버리 4와 디스커버리 5 중 어떤 모델의 잔고장이 더 많나요?</dt>
+        <dd>오너들의 '내돈내산 후기'를 종합하면, 연식이 오래된 디스커버리 4 모델이 고질병으로 인한 잔고장이 더 많습니다. 특히 에어 서스펜션과 관련된 문제가 빈번하게 발생합니다. 디스커버리 5는 상대적으로 잔고장은 적으나, 첨단 전자 장비 고장 시 수리비가 높게 나올 수 있습니다.</dd>
+        <dt tabindex="0" aria-expanded="false">디스커버리 유지비 절약을 위해 랜드로버 전문 커뮤니티(동호회)에 가입하는 것이 도움이 되나요?</dt>
+        <dd>네, 큰 도움이 됩니다. 오너 커뮤니티에서는 실제 경험을 바탕으로 한 '전문 업체' 추천 정보, 부품 공동 구매, 그리고 고질병 발생 시 대처 방법 등을 공유합니다. 네이버 카페 등에서 활발하게 활동하는 동호회에 가입하는 것을 추천합니다.</dd>
+        <dt tabindex="0" aria-expanded="false">랜드로버 디스커버리의 중고차 가격 방어는 잘 되는 편인가요?</dt>
+        <dd>랜드로버 브랜드 전체적으로 감가상각이 높은 편입니다. 특히 디스커버리 4는 중고차 가격이 급락한 상태입니다. 신형 디스커버리 5도 다른 수입차 브랜드 대비 감가 폭이 큽니다. 이는 높은 유지비와 잔고장 우려가 반영된 결과입니다.</dd>
+      </dl>
+    </section>
+
+    <section id="reliable-sources">
+      <h2>신뢰할 수 있는 외부 정보 (공신력 있는 자료)</h2>
+      <p>랜드로버 유지비 관련 정보의 신뢰성을 높이기 위해 공신력 있는 기관의 자료를 참고하시기 바랍니다.</p>
+      <div class="external-links">
+        <a href="https://www.ftc.go.kr/www/CONTENTS_VIEW.html?CONTENTS_NO=10" target="_blank">공정거래위원회 - 자동차 소비자 가이드</a>
+        <a href="https://www.kca.go.kr/home/sub.do?menu_seq=29" target="_blank">한국소비자원 - 자동차 수리 관련 피해 상담</a>
+        <a href="https://www.law.go.kr/lsInfoP.do?lsiSeq=185853&efYd=20170101#0000" target="_blank">국가법령정보센터 - 자동차 관리법</a>
+        <a href="https://namu.wiki/w/%EB%9E%9C%EB%93%9C%EB%A1%9C%EB%B2%84%20%EB%94%94%EC%8A%A4%EC%BB%A4%EB%B2%84%EB%A6%AC" target="_blank">나무위키 - 랜드로버 디스커버리 상세 정보</a>
+        <a href="https://www.tax.go.kr/wq/wq_index.jsp" target="_blank">국세청 자동차세 계산기</a>
+        <a href="https://www.ecar.go.kr/main/index.jsp" target="_blank">자동차민원 대국민포털 (자동차 이력 조회)</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    document.querySelectorAll('dl dt').forEach((dt) => {
+      dt.addEventListener('click', () => {
+        const dd = dt.nextElementSibling;
+        const expanded = dt.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('dl dt').forEach(otherDt => {
+          if (otherDt !== dt) {
+            otherDt.classList.remove('active');
+            otherDt.setAttribute('aria-expanded', 'false');
+            otherDt.nextElementSibling.style.display = 'none';
+          }
+        });
+        dt.classList.toggle('active');
+        dt.setAttribute('aria-expanded', !expanded);
+        dd.style.display = expanded ? 'none' : 'block';
+      });
+      dt.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          dt.click();
+        }
+      });
+    });
+  </script>
+  
